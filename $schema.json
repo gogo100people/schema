@@ -1,0 +1,56 @@
+{
+    "$defs": {
+        "AppearanceConfig": {
+            "type": "object",
+            "properties": {
+                "acrylicWindow": {
+                    "description": "Enable or disable the acrylic effect on the window",
+                    "type": "boolean"
+                },
+                "font": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "color",
+                "font"
+            ]
+        },
+        "WindowConfig": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "appearance": {
+                    "$ref": "#/$defs/AppearanceConfig"
+                },
+                "posandsize": {
+                    "type": "object",
+                    "properties": {
+                        "width": {
+                            "description": "Width of the window",
+                            "type": "number"
+                        },
+                        "height": {
+                            "description": "Height of the window",
+                            "type": "number"
+                        },
+                        "xpos": {
+                            "description": "X position of the window when it is opened",
+                            "type": "number"
+                        },
+                        "ypos": {
+                            "description": "Y position of the window when it is opened",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "width",
+                        "height"
+                    ] 
+                }
+            }
+        }
+    }
+}
