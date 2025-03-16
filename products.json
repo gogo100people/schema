@@ -4,7 +4,8 @@
     "properties": {
         "type": "array",
         "items": {
-            "type": "object",
+            "type": "array",
+            
             "properties": {
                 "name": {
                     "type": "string"
